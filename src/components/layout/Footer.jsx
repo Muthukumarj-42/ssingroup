@@ -55,8 +55,7 @@ const Footer = () => {
                                 <MapPin size={20} className="icon" />
                                 <span>
                                     <strong>Headquarters:</strong><br />
-                                    123 Corporate Ave, Business Bay,<br />
-                                    Dubai, UAE
+                                    Tamil Nadu, India
                                 </span>
                             </li>
                             <li>
