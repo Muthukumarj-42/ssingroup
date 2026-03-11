@@ -1,0 +1,235 @@
+/* Projects Gallery Styles */
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filter-btn {
+    background-color: var(--white);
+    border: 1px solid #e2e8f0;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-btn.active {
+    background-color: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.portfolio-item {
+    position: relative;
+    height: 280px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 42, 90, 0.85);
+    /* Accent color with opacity */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    opacity: 0;
+    transition: var(--transition);
+    text-align: center;
+    padding: 20px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.zoom-icon {
+    margin-bottom: 16px;
+    transform: scale(0.5);
+    transition: transform 0.3s ease 0.1s;
+}
+
+.portfolio-item:hover .zoom-icon {
+    transform: scale(1);
+}
+
+.portfolio-overlay h4 {
+    color: var(--white);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    transition: transform 0.3s ease 0.15s;
+}
+
+.portfolio-item:hover h4 {
+    transform: translateY(0);
+}
+
+.portfolio-overlay span {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease 0.2s;
+    font-size: 0.9rem;
+}
+
+.portfolio-item:hover span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Lightbox */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 2001;
+}
+
+.lightbox-close:hover {
+    color: var(--secondary);
+    transform: rotate(90deg);
+}
+
+/* Utilities used in JSX */
+.pt-20 {
+    padding-top: 5rem;
+}
+
+.pb-20 {
+    padding-bottom: 5rem;
+}
+
+.py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.mt-16 {
+    margin-top: 4rem;
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.opacity-90 {
+    opacity: 0.9;
+}
+
+.max-w-2xl {
+    max-width: 42rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.col-span-full {
+    grid-column: 1 / -1;
+}
+
+.min-h-\[70vh\] {
+    min-height: 70vh;
+}

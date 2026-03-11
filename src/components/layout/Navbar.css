@@ -1,0 +1,202 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px 0;
+    background-color: transparent;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: var(--white);
+    padding: 16px 0;
+    box-shadow: var(--shadow);
+}
+
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .logo h1,
+.navbar.scrolled .dropdown-trigger {
+    color: var(--text-dark);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar:not(.scrolled) .logo h1 {
+    color: var(--white);
+    /* Assuming Home hero is dark/image */
+}
+
+.logo span {
+    font-weight: 300;
+    color: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a,
+.dropdown-trigger {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--primary);
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.navbar:not(.scrolled) .nav-links a,
+.navbar:not(.scrolled) .dropdown-trigger,
+.navbar:not(.scrolled) .nav-actions .mobile-toggle {
+    color: var(--white);
+}
+
+.nav-links a:hover,
+.dropdown-trigger:hover,
+.nav-links a.active-link {
+    color: var(--secondary);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 220px;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--radius);
+    padding: 16px 0;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    padding: 10px 24px;
+    color: var(--text-dark) !important;
+    font-weight: 400;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--gray-light);
+    color: var(--primary) !important;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* Base override for pages without hero */
+body:not(.home-page) .navbar:not(.scrolled) {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 16px 0;
+}
+
+body:not(.home-page) .navbar:not(.scrolled) .nav-links a,
+body:not(.home-page) .navbar:not(.scrolled) .dropdown-trigger,
+body:not(.home-page) .navbar:not(.scrolled) .logo h1,
+body:not(.home-page) .navbar:not(.scrolled) .mobile-toggle {
+    color: var(--text-dark);
+}
+
+body:not(.home-page) .navbar:not(.scrolled) .logo h1 {
+    color: var(--primary);
+}
+
+@media (max-width: 992px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: 100px 32px 32px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
+        transition: var(--transition);
+        align-items: flex-start;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a,
+    .dropdown-trigger {
+        color: var(--text-dark) !important;
+        font-size: 1.1rem;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding: 10px 0 10px 20px;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+
+    .dropdown-menu.show {
+        display: flex;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-btn {
+        display: none;
+    }
+}
