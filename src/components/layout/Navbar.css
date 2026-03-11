@@ -27,7 +27,18 @@
     align-items: center;
 }
 
-.logo h1 {
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-logo-img {
+    height: 45px;
+    width: auto;
+}
+
+.brand-title {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
@@ -37,7 +48,7 @@
     gap: 8px;
 }
 
-.navbar:not(.scrolled) .logo h1 {
+.navbar:not(.scrolled) .brand-title {
     color: var(--white);
     /* Assuming Home hero is dark/image */
 }
@@ -145,8 +156,18 @@ body:not(.home-page) .navbar:not(.scrolled) .mobile-toggle {
     color: var(--text-dark);
 }
 
-body:not(.home-page) .navbar:not(.scrolled) .logo h1 {
+body:not(.home-page) .navbar:not(.scrolled) .brand-title {
     color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .brand-title {
+        font-size: 1.1rem;
+    }
+    
+    .brand-logo-img {
+        height: 35px;
+    }
 }
 
 @media (max-width: 992px) {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import logoImg from '../../assets/ssinlogo.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -36,8 +37,9 @@ const Navbar = () => {
     return (
         <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-container">
-                <Link to="/" className="logo">
-                    <h1>SS <span>International Group</span></h1>
+                <Link to="/" className="logo nav-brand">
+                    <img src={logoImg} alt="SS International Group Logo" className="brand-logo-img" />
+                    <h1 className="brand-title">SS <span>International Group</span></h1>
                 </Link>
 
                 <nav className={`nav-links ${isOpen ? 'active' : ''}`}>

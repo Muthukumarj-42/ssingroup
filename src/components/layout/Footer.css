@@ -29,14 +29,24 @@
 }
 
 .footer-logo {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
     margin-bottom: 24px;
     text-decoration: none;
 }
 
-.footer-logo h2 {
+.footer-logo-img {
+    height: 60px;
+    width: auto;
+    background: white;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.footer-brand-title {
     color: var(--white);
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 0;
 }
 
@@ -153,5 +163,13 @@
     .footer-bottom {
         flex-direction: column;
         text-align: center;
+    }
+
+    .footer-brand-title {
+        font-size: 1.3rem;
+    }
+
+    .footer-logo-img {
+        height: 50px;
     }
 }

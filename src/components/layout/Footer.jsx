@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
+import logoImg from '../../assets/ssinlogo.png';
 import './Footer.css';
 
 const Footer = () => {
@@ -12,7 +13,8 @@ const Footer = () => {
                 <div className="footer-grid">
                     <div className="footer-col about-col">
                         <Link to="/" className="footer-logo">
-                            <h2>SS <span>International Group</span></h2>
+                            <img src={logoImg} alt="SS International Group Logo" className="footer-logo-img" />
+                            <h2 className="footer-brand-title">SS <span>International Group</span></h2>
                         </Link>
                         <p>
                             Building Global Businesses Across Industries. SS International Group is a diversified international business group operating in India, UAE, and USA.
