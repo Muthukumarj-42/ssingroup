@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import managingDirectorImg from '../assets/managing director.jpeg';
 
 const About = () => {
     return (
@@ -50,7 +51,7 @@ const About = () => {
 
                         <div className="bg-white p-8 rounded-xl shadow-lg mt-10 text-left">
                             <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-                                <img src="src\assets\managing director.jpeg" alt="Managing Director" className="w-48 h-48 rounded-full object-cover shadow-md" />
+                                <img src={managingDirectorImg} alt="Managing Director" className="w-48 h-48 rounded-full object-cover shadow-md" />
                                 <div>
                                     <h3 className="text-2xl font-bold text-accent mb-2">MR KUMAR</h3>
                                     <p className="text-primary font-semibold mb-4 uppercase tracking-wider text-sm">Managing Director</p>
