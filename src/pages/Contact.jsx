@@ -71,8 +71,7 @@ const Contact = () => {
                                     <div>
                                         <h4 className="font-semibold text-lg text-primary">Address</h4>
                                         <p className="text-gray-600">
-                                            123 Corporate Ave, Business Bay,<br />
-                                            Dubai, United Arab Emirates
+                                            Tamil Nadu, India
                                         </p>
                                     </div>
                                 </div>
