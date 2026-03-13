@@ -64,7 +64,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4>Address</h4>
-                    <p>Tamil Nadu, India</p>
+                    <p>69C8+MGJ, Perumanallur,</p>
+                    <p>Tamil Nadu 641666, India</p>
                   </div>
                 </div>
 
@@ -99,13 +100,18 @@ const Contact = () => {
               </div>
 
               {/* Minimal Map UI Simulation */}
-              <div className="map-embed-container">
+              <a
+                href="https://maps.google.com/?q=69C8%2BMGJ,+Perumanallur,+Tamil+Nadu+641666,+India"
+                target="_blank"
+                rel="noreferrer"
+                className="map-embed-container"
+              >
                 <div className="map-overlay">
                   <div className="map-btn">
                     <MapPin size={18} /> View on Google Maps
                   </div>
                 </div>
-              </div>
+              </a>
             </motion.div>
 
             {/* Contact Form */}

@@ -100,6 +100,7 @@
 
 /* Minimal Map */
 .map-embed-container {
+    display: block;
     height: 250px;
     position: relative;
     border-radius: var(--radius-lg);
@@ -110,6 +111,14 @@
     background-position: center;
     filter: saturate(0); 
     border: 1px solid rgba(0,0,0,0.05);
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.map-embed-container:hover {
+    filter: saturate(0.5);
+    box-shadow: var(--shadow-lg);
 }
 
 .map-overlay {
