@@ -104,10 +104,16 @@ const Home = () => {
                             <motion.div
                                 key={idx}
                                 className="division-card"
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 40 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ 
+                                    duration: 0.5, 
+                                    delay: idx * 0.1,
+                                    type: "spring",
+                                    stiffness: 120,
+                                    damping: 20
+                                }}
                             >
                                 <div className="card-icon">{div.icon}</div>
                                 <h3>{div.title}</h3>
@@ -133,10 +139,16 @@ const Home = () => {
                             <motion.div
                                 key={idx}
                                 className="project-card"
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ 
+                                    duration: 0.6, 
+                                    delay: idx * 0.1,
+                                    type: "spring",
+                                    stiffness: 100,
+                                    damping: 20
+                                }}
                             >
                                 <div className="project-img">
                                     <img src={project.img} alt={project.title} />

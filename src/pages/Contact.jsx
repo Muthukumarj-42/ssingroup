@@ -28,24 +28,24 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-page pt-20">
-      <section className="bg-primary text-white py-16 mt-16 text-center">
+    <div className="page-wrapper pt-20">
+      <section className="contact-hero">
         <div className="container">
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-4xl font-bold mb-4"
+            transition={{ type: "spring", stiffness: 100 }}
           >
             Contact Us
           </motion.h1>
-          <p className="text-xl max-w-2xl mx-auto opacity-90">
+          <p>
             We operate globally. Reach out to our team for inquiries,
             partnerships, or support.
           </p>
         </div>
       </section>
 
-      <section className="section bg-gray-50">
+      <section className="section section-light">
         <div className="container">
           <div className="contact-grid">
             {/* Contact Info & Map */}
@@ -53,65 +53,55 @@ const Contact = () => {
               className="contact-info-wrapper"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
             >
-              <div className="contact-card bg-white shadow-lg rounded-xl p-8 mb-8">
-                <h3 className="text-2xl font-bold text-accent mb-6">
-                  Global Headquarters
-                </h3>
+              <div className="card contact-card">
+                <h3>Global Headquarters</h3>
 
-                <div className="info-item mb-6 flex items-start gap-4">
-                  <div className="icon-box bg-blue-50 text-secondary p-3 rounded-full">
+                <div className="info-item">
+                  <div className="icon-box animate-pulse-glow">
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-primary">
-                      Address
-                    </h4>
-                    <p className="text-gray-600">Tamil Nadu, India</p>
+                    <h4>Address</h4>
+                    <p>Tamil Nadu, India</p>
                   </div>
                 </div>
 
-                <div className="info-item mb-6 flex items-start gap-4">
-                  <div className="icon-box bg-blue-50 text-secondary p-3 rounded-full">
+                <div className="info-item">
+                  <div className="icon-box">
                     <Phone size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-primary">
-                      Phone
-                    </h4>
-                    <p className="text-gray-600">+91 944 222 56 56</p>
+                    <h4>Phone</h4>
+                    <p>+91 944 222 56 56</p>
                   </div>
                 </div>
 
-                <div className="info-item flex items-start gap-4">
-                  <div className="icon-box bg-blue-50 text-secondary p-3 rounded-full">
+                <div className="info-item">
+                  <div className="icon-box">
                     <Mail size={24} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-lg text-primary">
-                      Email
-                    </h4>
-                    <p className="text-gray-600">contact@ssingroup.com</p>
+                    <h4>Email</h4>
+                    <p>contact@ssingroup.com</p>
                   </div>
                 </div>
 
-                <hr className="my-8 border-gray-200" />
-
                 <a
-                  href="https://wa.me/971509876543"
+                  href="https://wa.me/9442225656"
                   target="_blank"
                   rel="noreferrer"
-                  className="whatsapp-btn flex items-center justify-center gap-2 w-full bg-[#25D366] text-white py-3 rounded-lg font-semibold hover:bg-[#128C7E] transition-colors"
+                  className="whatsapp-btn"
                 >
                   <MessageCircle size={24} /> Chat on WhatsApp
                 </a>
               </div>
 
               {/* Minimal Map UI Simulation */}
-              <div className="map-embed-container rounded-xl overflow-hidden shadow-lg h-64 bg-gray-200 relative">
-                <div className="absolute inset-0 flex items-center justify-center text-gray-500 font-semibold bg-[url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg')] bg-cover bg-center brightness-90">
-                  <div className="bg-white px-4 py-2 rounded-lg shadow-md flex items-center gap-2 text-primary">
+              <div className="map-embed-container">
+                <div className="map-overlay">
+                  <div className="map-btn">
                     <MapPin size={18} /> View on Google Maps
                   </div>
                 </div>
@@ -120,17 +110,15 @@ const Contact = () => {
 
             {/* Contact Form */}
             <motion.div
-              className="contact-form-wrapper bg-white shadow-lg rounded-xl p-8"
+              className="card contact-form-wrapper"
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.6, type: "spring", stiffness: 100, delay: 0.2 }}
             >
-              <h3 className="text-2xl font-bold text-accent mb-6">
-                Send Us a Message
-              </h3>
+              <h3>Send Us a Message</h3>
 
               {submitted ? (
-                <div className="success-message bg-green-50 text-green-700 p-6 rounded-lg text-center border border-green-200">
+                <div className="success-message">
                   <p className="text-xl font-bold mb-2">Thank You!</p>
                   <p>
                     Your message has been successfully sent. Our team will get
@@ -152,7 +140,7 @@ const Contact = () => {
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-2 gap-8">
                     <div className="form-group">
                       <label htmlFor="email">Email Address *</label>
                       <input
@@ -191,27 +179,13 @@ const Contact = () => {
                       <option value="" disabled>
                         Select a subject
                       </option>
-                      <option value="Builders Inquiry">
-                        SS Builders Inquiry
-                      </option>
-                      <option value="Real Estate Inquiry">
-                        SS Real Estate Inquiry
-                      </option>
-                      <option value="Jewellery Inquiry">
-                        SS Jewellery Inquiry
-                      </option>
-                      <option value="Garments Inquiry">
-                        SS Garments Inquiry
-                      </option>
-                      <option value="Finance Inquiry">
-                        SS Finance Inquiry
-                      </option>
-                      <option value="Organic Products Inquiry">
-                        SS Organic Products Inquiry
-                      </option>
-                      <option value="General Inquiry">
-                        General Corporate Inquiry
-                      </option>
+                      <option value="Builders Inquiry">SS Builders Inquiry</option>
+                      <option value="Real Estate Inquiry">SS Real Estate Inquiry</option>
+                      <option value="Jewellery Inquiry">SS Jewellery Inquiry</option>
+                      <option value="Garments Inquiry">SS Garments Inquiry</option>
+                      <option value="Finance Inquiry">SS Finance Inquiry</option>
+                      <option value="Organic Products Inquiry">SS Organic Products Inquiry</option>
+                      <option value="General Inquiry">General Corporate Inquiry</option>
                     </select>
                   </div>
 
@@ -228,10 +202,7 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  <button
-                    type="submit"
-                    className="btn btn-primary w-full flex justify-center items-center gap-2 text-lg py-3 mt-4"
-                  >
+                  <button type="submit" className="btn btn-primary w-full mt-4">
                     Send Message <Send size={20} />
                   </button>
                 </form>

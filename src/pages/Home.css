@@ -6,11 +6,11 @@
     background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     color: var(--white);
     padding-top: 80px;
-    /* Offset for navbar */
 }
 
 .hero-overlay {
@@ -19,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(10, 79, 158, 0.8) 0%, rgba(5, 42, 90, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.9) 0%, rgba(0, 180, 216, 0.6) 100%);
 }
 
 .hero-content {
@@ -29,19 +29,20 @@
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 800;
     color: var(--white);
     margin-bottom: 1rem;
     line-height: 1.1;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 300;
     margin-bottom: 2rem;
-    opacity: 0.9;
+    opacity: 0.95;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .global-presence {
@@ -54,10 +55,11 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--secondary);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .global-presence .divider {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .hero-actions {
@@ -71,21 +73,22 @@
 }
 
 .section-header p {
-    font-size: 1.1rem;
-    color: var(--text-light);
+    font-size: 1.15rem;
+    color: var(--text-muted);
     max-width: 700px;
     margin: 0 auto;
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 8px;
+    color: var(--primary);
 }
 
 .heading-line {
     width: 60px;
     height: 4px;
-    background-color: var(--primary);
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
     margin-bottom: 24px;
     border-radius: 2px;
 }
@@ -96,7 +99,7 @@
 }
 
 .heading-line.bg-white {
-    background-color: var(--white);
+    background: var(--white);
 }
 
 /* About Section */
@@ -108,17 +111,18 @@
 }
 
 .about-text h2 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+    color: var(--primary);
 }
 
 .about-text p {
-    color: var(--text-light);
+    color: var(--text-muted);
     margin-bottom: 20px;
     font-size: 1.1rem;
 }
 
 .about-image img {
-    border-radius: var(--radius);
+    border-radius: var(--radius-xl);
     box-shadow: var(--shadow-lg);
     object-fit: cover;
     height: 100%;
@@ -146,22 +150,25 @@
 .division-card {
     background-color: var(--white);
     padding: 40px 30px;
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     box-shadow: var(--shadow);
     transition: var(--transition);
-    border-bottom: 4px solid transparent;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .division-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
-    border-bottom-color: var(--primary);
+    border-color: rgba(0, 180, 216, 0.2);
 }
 
 .card-icon {
     width: 70px;
     height: 70px;
-    background-color: rgba(10, 79, 158, 0.1);
+    background: linear-gradient(135deg, rgba(0, 180, 216, 0.1), rgba(10, 25, 47, 0.05));
     color: var(--primary);
     display: flex;
     align-items: center;
@@ -172,19 +179,23 @@
 }
 
 .division-card:hover .card-icon {
-    background-color: var(--primary);
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
     color: var(--white);
+    box-shadow: 0 10px 20px rgba(0, 180, 216, 0.3);
+    transform: scale(1.1);
 }
 
 .division-card h3 {
     font-size: 1.4rem;
     margin-bottom: 15px;
+    color: var(--primary);
 }
 
 .division-card p {
-    color: var(--text-light);
+    color: var(--text-muted);
     margin-bottom: 24px;
     font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .card-link {
@@ -196,28 +207,36 @@
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 1px;
+    transition: var(--transition);
 }
 
 .card-link:hover {
-    color: var(--accent);
+    color: var(--secondary);
+    gap: 12px;
 }
 
 /* Projects */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 30px;
 }
 
 .project-card {
-    border-radius: var(--radius);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
 }
 
 .project-img {
     position: relative;
-    height: 300px;
+    height: 320px;
     overflow: hidden;
 }
 
@@ -225,11 +244,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover .project-img img {
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 .project-overlay {
@@ -237,12 +256,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 30px 20px 20px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 40px 20px 20px;
+    background: linear-gradient(to top, rgba(10, 25, 47, 0.95), transparent);
     color: var(--white);
     transform: translateY(20px);
     opacity: 0;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card:hover .project-overlay {
@@ -257,16 +276,21 @@
     letter-spacing: 1px;
     color: var(--secondary);
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .project-overlay h4 {
     color: var(--white);
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
 }
 
 /* Global Map */
+.global-map {
+    position: relative;
+    overflow: hidden;
+}
+
 .map-wrapper {
     position: relative;
     max-width: 900px;
@@ -276,8 +300,9 @@
 .world-map-img {
     width: 100%;
     height: auto;
-    opacity: 0.8;
+    opacity: 0.6;
     display: block;
+    filter: invert(1) brightness(2);
 }
 
 .map-point {
@@ -285,38 +310,45 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--secondary);
+    color: var(--accent);
     font-weight: 600;
     transform: translate(-50%, -100%);
     z-index: 5;
+    animation: float 4s ease-in-out infinite;
 }
 
 .map-point span {
-    background-color: var(--white);
-    color: var(--primary);
-    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.8rem;
-    margin-top: 4px;
-    box-shadow: var(--shadow);
+    font-size: 0.85rem;
+    margin-top: 8px;
+    box-shadow: var(--shadow-md);
 }
 
 .map-point.us {
-    top: 35%;
-    left: 22%;
+    top: 26%;
+    left: 21%;
+    animation-delay: 0s;
 }
 
 .map-point.uae {
-    top: 44%;
-    left: 64%;
+    top: 38%;
+    left: 62%;
+    animation-delay: 1s;
 }
 
 .map-point.ind {
-    top: 47%;
-    left: 71%;
+    top: 42%;
+    left: 66%;
+    animation-delay: 2s;
 }
 
-/* Testimonials */
+/* Testimonials - Glassmorphism */
 .testimonials-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -324,23 +356,34 @@
 }
 
 .testimonial-card {
-    background-color: var(--gray-light);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     padding: 40px;
-    border-radius: var(--radius);
+    border-radius: var(--radius-xl);
     position: relative;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(0, 180, 216, 0.3);
 }
 
 .quote-icon {
-    color: rgba(10, 79, 158, 0.1);
+    color: rgba(0, 180, 216, 0.15);
     position: absolute;
     top: 30px;
     right: 30px;
 }
 
 .testimonial-text {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-style: italic;
-    color: var(--text-dark);
+    color: var(--text-main);
     margin-bottom: 30px;
     line-height: 1.8;
     position: relative;
@@ -350,17 +393,18 @@
 .client-info h4 {
     margin-bottom: 4px;
     color: var(--primary);
+    font-size: 1.1rem;
 }
 
 .client-info span {
-    color: var(--text-light);
-    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
 /* Responsive */
 @media (max-width: 992px) {
     .hero h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .about-grid,
@@ -373,7 +417,7 @@
 
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .hero-actions {
@@ -402,7 +446,7 @@
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .global-presence {

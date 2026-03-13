@@ -10,15 +10,18 @@
 }
 
 .navbar.scrolled {
-    background-color: var(--white);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     padding: 16px 0;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-sm);
 }
 
 .navbar.scrolled .nav-links a,
 .navbar.scrolled .logo h1,
 .navbar.scrolled .dropdown-trigger {
-    color: var(--text-dark);
+    color: var(--text-main);
 }
 
 .nav-container {
@@ -76,12 +79,37 @@
     display: flex;
     align-items: center;
     gap: 4px;
+    position: relative;
+}
+
+.nav-links a::after,
+.dropdown-trigger::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.dropdown-trigger:hover::after,
+.nav-links a.active-link::after {
+    width: 100%;
 }
 
 .navbar:not(.scrolled) .nav-links a,
 .navbar:not(.scrolled) .dropdown-trigger,
 .navbar:not(.scrolled) .nav-actions .mobile-toggle {
     color: var(--white);
+}
+
+/* Make sure the white border shows on the transparent background */
+.navbar:not(.scrolled) .nav-links a::after,
+.navbar:not(.scrolled) .dropdown-trigger::after {
+    background: var(--secondary);
 }
 
 .nav-links a:hover,
@@ -144,8 +172,11 @@
 
 /* Base override for pages without hero */
 body:not(.home-page) .navbar:not(.scrolled) {
-    background-color: var(--white);
-    box-shadow: var(--shadow);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-sm);
     padding: 16px 0;
 }
 
@@ -153,7 +184,7 @@ body:not(.home-page) .navbar:not(.scrolled) .nav-links a,
 body:not(.home-page) .navbar:not(.scrolled) .dropdown-trigger,
 body:not(.home-page) .navbar:not(.scrolled) .logo h1,
 body:not(.home-page) .navbar:not(.scrolled) .mobile-toggle {
-    color: var(--text-dark);
+    color: var(--text-main);
 }
 
 body:not(.home-page) .navbar:not(.scrolled) .brand-title {
