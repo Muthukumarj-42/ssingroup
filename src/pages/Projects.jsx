@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn } from 'lucide-react';
+import buildingImg from '../assets/image2-2.jpg';
 import './Projects.css';
+
 
 const allProjects = [
     // Builders
-    { id: 1, title: 'Luxury Residency Project', category: 'builders', img: 'https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?w=800&q=80' },
+    { id: 1, title: 'Luxury Residency Project', category: 'builders', img: buildingImg },
     { id: 2, title: 'Commercial Plaza Skyfall', category: 'builders', img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80' },
     { id: 3, title: 'Downtown Infrastructure', category: 'builders', img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80' },
 

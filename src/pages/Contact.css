@@ -9,7 +9,8 @@
 .contact-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: #ffffff;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-hero p {
@@ -32,7 +33,7 @@
 
 .contact-card {
     transition: var(--transition);
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .icon-box {
@@ -109,8 +110,8 @@
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
     background-size: cover;
     background-position: center;
-    filter: saturate(0); 
-    border: 1px solid rgba(0,0,0,0.05);
+    filter: saturate(0);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     cursor: pointer;
     text-decoration: none;
     transition: var(--transition);
@@ -169,7 +170,7 @@
 .form-group textarea {
     width: 100%;
     padding: 16px 20px;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-lg);
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -209,7 +210,7 @@
     border: 1px solid rgba(20, 184, 166, 0.2);
 }
 
-.contact-card h3, 
+.contact-card h3,
 .contact-form-wrapper h3 {
     font-size: 2rem;
     margin-bottom: 30px;
