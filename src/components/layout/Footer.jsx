@@ -37,17 +37,8 @@ const Footer = () => {
               India, UAE, and USA.
             </p>
             <div className="social-links">
-              <a href="#" aria-label="Facebook">
-                <Facebook size={20} />
-              </a>
-              <a href="#" aria-label="Twitter">
-                <Twitter size={20} />
-              </a>
-              <a href="#" aria-label="Instagram">
+              <a href="https://www.instagram.com/ssgroup339?igsh=cW12M2hhNWd0NDIz" aria-label="Instagram">
                 <Instagram size={20} />
-              </a>
-              <a href="#" aria-label="LinkedIn">
-                <Linkedin size={20} />
               </a>
             </div>
           </div>
@@ -73,11 +64,6 @@ const Footer = () => {
               <li>
                 <Link to="/contact">
                   <ArrowRight size={16} /> Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/careers">
-                  <ArrowRight size={16} /> Careers
                 </Link>
               </li>
             </ul>
@@ -146,10 +132,6 @@ const Footer = () => {
           <p>
             &copy; {currentYear} SS International Group. All Rights Reserved.
           </p>
-          <div className="footer-bottom-links">
-            <Link to="/privacy-policy">Privacy Policy</Link>
-            <Link to="/terms-of-service">Terms of Service</Link>
-          </div>
         </div>
       </div>
     </footer>
