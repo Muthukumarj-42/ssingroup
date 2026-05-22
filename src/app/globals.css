@@ -1,0 +1,279 @@
+@import "tailwindcss";
+
+/* ============================================================
+   DESIGN TOKENS — Tailwind v4 CSS-based theme
+   ============================================================ */
+@theme {
+  /* Colors */
+  --color-navy: #0A1628;
+  --color-navy-light: #101C2E;
+  --color-navy-muted: #3C475B;
+
+  --color-gold: #C9922B;
+  --color-gold-light: #E8B84B;
+  --color-gold-pale: #FFC157;
+
+  --color-cream: #F5F4F0;
+  --color-cream-warm: #FAFAF8;
+  --color-cream-border: #E2E0D8;
+
+  --color-surface-low: #F5F2FF;
+  --color-surface-mid: #EEECFF;
+  --color-surface-high: #E8E6FA;
+
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+
+  /* Spacing */
+  --spacing-section: 120px;
+  --spacing-section-mobile: 64px;
+
+  /* Border radius */
+  --radius-card: 16px;
+  --radius-btn: 4px;
+
+  /* Max widths */
+  --breakpoint-content: 1280px;
+}
+
+/* ============================================================
+   BASE LAYER
+   ============================================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    color: #0A1628;
+    background-color: #FAFAF8;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: #0A1628;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+/* ============================================================
+   COMPONENT LAYER — Reusable utility classes
+   ============================================================ */
+@layer components {
+  /* Section Label */
+  .section-label {
+    font-family: var(--font-montserrat), sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #C9922B;
+    display: inline-block;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #0A1628;
+    color: #ffffff;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 800;
+    font-size: 0.875rem;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+  }
+  .btn-primary:hover {
+    background-color: #101C2E;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    color: #0A1628;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border: 1px solid #0A1628;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-secondary:hover {
+    background-color: rgba(10, 22, 40, 0.05);
+  }
+
+  .btn-secondary-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-secondary-white:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: #C9922B;
+    color: #0A1628;
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 800;
+    font-size: 0.875rem;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+  }
+  .btn-gold:hover {
+    background-color: #E8B84B;
+  }
+
+  /* Cards */
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #E2E0D8;
+    border-radius: 16px;
+    padding: 1.75rem;
+  }
+
+  /* Layout */
+  .section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .container-content {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  /* Form inputs */
+  .form-input {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #E2E0D8;
+    border-radius: 4px;
+    padding: 0 1rem;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.875rem;
+    color: #0A1628;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+  }
+  .form-input:focus {
+    border-color: #C9922B;
+    box-shadow: 0 0 0 3px rgba(201, 146, 43, 0.15);
+  }
+
+  .form-label {
+    display: block;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(10, 22, 40, 0.5);
+    margin-bottom: 0.5rem;
+  }
+
+  /* Gold accent line */
+  .gold-line {
+    width: 60px;
+    height: 2px;
+    background-color: #C9922B;
+    margin: 0 auto;
+  }
+
+  .gold-line-left {
+    width: 60px;
+    height: 2px;
+    background-color: #C9922B;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE OVERRIDES
+   ============================================================ */
+@media (max-width: 1024px) {
+  .section-padding {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  .container-content {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
