@@ -4,7 +4,7 @@ import AdminLoginClient from './AdminLoginClient'
 
 export const metadata: Metadata = genMeta({
   title: 'Admin Login',
-  description: 'SS International Group admin portal.',
+  description: 'SS INTERNATIONAL GROUP admin portal.',
   path: '/admin/login',
   noIndex: true,
 })

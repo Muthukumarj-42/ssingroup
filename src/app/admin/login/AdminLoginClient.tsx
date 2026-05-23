@@ -28,7 +28,7 @@ export default function AdminLoginClient() {
     <div style={{ minHeight: '100vh', backgroundColor: '#F5F4F0', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2rem' }}>
       <div style={{ width: '100%', maxWidth: '480px', backgroundColor: '#ffffff', border: '1px solid #E2E0D8', borderRadius: '16px', padding: '3rem' }}>
         <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-          <div style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 800, fontSize: '1.1rem', color: '#0A1628', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>SS International Group</div>
+          <div className="brand-name" style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 800, fontSize: '1.1rem', color: '#0A1628', marginBottom: '0.5rem', letterSpacing: '-0.02em' }}>SS INTERNATIONAL GROUP</div>
           <h1 style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 700, fontSize: '1.75rem', color: '#0A1628', letterSpacing: '-0.02em' }}>Admin Access</h1>
         </div>
         <form onSubmit={handleLogin}>

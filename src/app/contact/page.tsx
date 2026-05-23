@@ -7,7 +7,7 @@ import FAQAccordion from '@/components/sections/contact/FAQAccordion'
 
 export const metadata: Metadata = genMeta({
   title: 'Contact',
-  description: 'Get in touch with SS International Group. Offices in Gurgaon India, Dubai UAE, and New York USA. Global inquiry form and direct contacts.',
+  description: 'Get in touch with SS INTERNATIONAL GROUP. Offices in Tamil Nadu India, Dubai UAE, and New York USA. Global inquiry form and direct contacts.',
   path: '/contact',
 })
 

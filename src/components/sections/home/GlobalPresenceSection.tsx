@@ -1,9 +1,9 @@
-import Image from 'next/image'
 import FadeIn from '@/components/ui/FadeIn'
 import { MapPin } from 'lucide-react'
+import WorldMap from '@/components/sections/home/WorldMap'
 
 const locations = [
-  { city: 'New Delhi', country: 'India', flag: '🇮🇳', description: 'South Asia Operations & Manufacturing Hub' },
+  { city: 'Tamil Nadu', country: 'India', flag: '🇮🇳', description: 'South Asia Operations & Manufacturing Hub' },
   { city: 'Dubai', country: 'UAE', flag: '🇦🇪', description: 'Middle East & Africa Strategic Headquarters' },
   { city: 'New York', country: 'USA', flag: '🇺🇸', description: 'Western Markets & Financial Services Center' },
 ]
@@ -38,16 +38,8 @@ export default function GlobalPresenceSection() {
             </div>
           </div>
 
-          <FadeIn direction="left">
-            <div style={{ borderRadius: '16px', overflow: 'hidden', position: 'relative', aspectRatio: '4/3', backgroundColor: '#F5F4F0' }}>
-              <Image
-                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&q=80"
-                alt="World map showing SS International Group's presence across India, UAE, and USA"
-                fill
-                style={{ objectFit: 'cover' }}
-                sizes="(max-width:768px) 100vw, 45vw"
-              />
-            </div>
+          <FadeIn direction="left" className="w-full">
+            <WorldMap />
           </FadeIn>
         </div>
       </div>

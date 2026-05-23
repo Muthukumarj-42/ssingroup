@@ -6,7 +6,7 @@ import FadeIn from '@/components/ui/FadeIn'
 
 export const metadata: Metadata = genMeta({
   title: 'Application Submitted Successfully',
-  description: 'Your job application has been submitted successfully to the SS International Group recruitment office.',
+  description: 'Your job application has been submitted successfully to the SS INTERNATIONAL GROUP recruitment office.',
   path: '/careers/success',
   noIndex: true,
 })
@@ -68,7 +68,7 @@ export default function SuccessPage() {
                 marginRight: 'auto',
               }}
             >
-              Thank you for expressing interest in joining SS International Group. Your curriculum vitae and professional qualifications have been successfully logged in our secure database.
+              Thank you for expressing interest in joining <span className="brand-name">SS INTERNATIONAL GROUP</span>. Your curriculum vitae and professional qualifications have been successfully logged in our secure database.
             </p>
 
             {/* Info Box */}

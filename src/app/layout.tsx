@@ -29,27 +29,27 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.ssingroup.com'),
   title: {
-    default: 'SS International Group | Global Business Conglomerate',
-    template: '%s | SS International Group',
+    default: 'SS INTERNATIONAL GROUP | Global Business Conglomerate',
+    template: '%s | SS INTERNATIONAL GROUP',
   },
   description:
-    'SS International Group operates 62+ businesses across India, UAE, and USA in construction, real estate, jewellery, garments, finance, and organic products.',
+    'SS INTERNATIONAL GROUP operates 62+ businesses across India, UAE, and USA in construction, real estate, jewellery, garments, finance, and organic products.',
   keywords: [
-    'SS International Group',
+    'SS INTERNATIONAL GROUP',
     'global business India',
     'real estate UAE',
     'construction company India',
     'international conglomerate',
     'business group India UAE USA',
   ],
-  authors: [{ name: 'SS International Group', url: 'https://www.ssingroup.com' }],
-  creator: 'SS International Group',
+  authors: [{ name: 'SS INTERNATIONAL GROUP', url: 'https://www.ssingroup.com' }],
+  creator: 'SS INTERNATIONAL GROUP',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://www.ssingroup.com',
-    siteName: 'SS International Group',
-    title: 'SS International Group | Global Business Conglomerate',
+    siteName: 'SS INTERNATIONAL GROUP',
+    title: 'SS INTERNATIONAL GROUP | Global Business Conglomerate',
     description:
       'A global powerhouse managing over 62 specialized businesses across India, UAE, and USA.',
     images: [{ url: '/images/og-default.jpg', width: 1200, height: 630 }],
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
 const organizationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'SS International Group',
+  name: 'SS INTERNATIONAL GROUP',
   url: 'https://www.ssingroup.com',
   logo: 'https://www.ssingroup.com/images/logo.png',
   description:
@@ -144,7 +144,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-cream-warm font-sans text-navy antialiased">
         <Navbar />
-        <main>{children}</main>
+        <main className="pt-[72px] lg:pt-[72px] pb-16 lg:pb-0">
+          {children}
+        </main>
         <Footer />
         <Analytics />
         <SpeedInsights />

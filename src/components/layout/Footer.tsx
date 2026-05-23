@@ -9,7 +9,7 @@ export default function Footer() {
         style={{ paddingTop: '5rem', paddingBottom: '4rem', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '3rem' }}>
         
         <div>
-          <div style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 800, fontSize: '1.1rem', color: '#ffffff', marginBottom: '0.75rem', letterSpacing: '-0.02em' }}>SS International Group</div>
+          <div className="brand-name" style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 800, fontSize: '1.1rem', color: '#ffffff', marginBottom: '0.75rem', letterSpacing: '-0.02em' }}>SS INTERNATIONAL GROUP</div>
           <p style={{ fontFamily: 'var(--font-inter)', fontSize: '0.875rem', color: 'rgba(255,255,255,0.55)', lineHeight: 1.7, marginBottom: '1.5rem', maxWidth: '240px' }}>A global conglomerate of 62+ businesses spanning construction, real estate, finance, textiles, and beyond.</p>
           <div style={{ display: 'flex', gap: '0.75rem' }}>
             {[Globe, Shield, Sparkles].map((Icon, i) => (
@@ -59,10 +59,10 @@ export default function Footer() {
 
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}>
         <div className="container-content" style={{ paddingTop: '1.25rem', paddingBottom: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem' }}>
-          <p style={{ fontFamily: 'var(--font-inter)', fontSize: '0.8125rem', color: 'rgba(255,255,255,0.4)', margin: 0 }}>&copy; {currentYear} SS International Group. All rights reserved.</p>
+          <p className="brand-name" style={{ fontFamily: 'var(--font-inter)', fontSize: '0.8125rem', color: 'rgba(255,255,255,0.4)', margin: 0 }}>&copy; {currentYear} SS INTERNATIONAL GROUP. All rights reserved.</p>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
             {['Privacy Policy', 'Terms of Service'].map((item) => (
-              <Link key={item} href="#" style={{ fontFamily: 'var(--font-inter)', fontSize: '0.8125rem', color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>{item}</Link>
+              <Link key={item} href="/under-construction" style={{ fontFamily: 'var(--font-inter)', fontSize: '0.8125rem', color: 'rgba(255,255,255,0.4)', textDecoration: 'none' }}>{item}</Link>
             ))}
           </div>
         </div>

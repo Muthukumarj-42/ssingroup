@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.ssingroup.com'
-const SITE_NAME = 'SS International Group'
+const SITE_NAME = 'SS INTERNATIONAL GROUP'
 const DEFAULT_DESCRIPTION =
-  'SS International Group is a global business conglomerate operating 62+ businesses across India, UAE, and USA in construction, real estate, jewellery, garments, finance, and organic products.'
+  'SS INTERNATIONAL GROUP is a global business conglomerate operating 62+ businesses across India, UAE, and USA in construction, real estate, jewellery, garments, finance, and organic products.'
 const DEFAULT_IMAGE = `${SITE_URL}/images/og-default.jpg`
 
 export function generateMetadata({
@@ -85,7 +85,7 @@ export function generateMetadata({
 
 function generateKeywords(pageTitle: string): string {
   const base = [
-    'SS International Group',
+    'SS INTERNATIONAL GROUP',
     'SSIN Group',
     'global business conglomerate',
     'India UAE USA business',
@@ -93,10 +93,10 @@ function generateKeywords(pageTitle: string): string {
   ]
   const pageMap: Record<string, string[]> = {
     Home: ['construction company India', 'real estate UAE', 'jewellery export India'],
-    About: ['SS International leadership', 'Mr Kumar managing director', 'business legacy India'],
+    About: ['SS INTERNATIONAL GROUP leadership', 'MR. KUMAR managing director', 'business legacy India'],
     Portfolio: ['global portfolio companies', 'investment portfolio India UAE', 'subsidiary businesses'],
-    Careers: ['jobs in SS International', 'careers India UAE USA', 'finance jobs Mumbai', 'real estate jobs Dubai'],
-    Contact: ['SS International contact', 'business inquiry India', 'Dubai office', 'New York office'],
+    Careers: ['jobs in SS INTERNATIONAL GROUP', 'careers India UAE USA', 'finance jobs Mumbai', 'real estate jobs Dubai'],
+    Contact: ['SS INTERNATIONAL GROUP contact', 'business inquiry India', 'Dubai office', 'New York office'],
   }
   return [...base, ...(pageMap[pageTitle] || [])].join(', ')
 }

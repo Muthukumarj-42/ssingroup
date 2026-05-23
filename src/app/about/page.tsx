@@ -8,7 +8,7 @@ import CommandCenters from '@/components/sections/about/CommandCenters'
 
 export const metadata: Metadata = genMeta({
   title: 'About Us',
-  description: "Learn about SS International Group's 40-year legacy, leadership team, global mission, and journey from a single vision to 62+ active businesses.",
+  description: "Learn about SS INTERNATIONAL GROUP's 40-year legacy, leadership team, global mission, and journey from a single vision to 62+ active businesses.",
   path: '/about',
 })
 

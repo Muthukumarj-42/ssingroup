@@ -24,7 +24,7 @@ export default function AdminSidebar() {
   return (
     <aside style={{ position: 'fixed', left: 0, top: 0, bottom: 0, width: '240px', backgroundColor: '#0A1628', display: 'flex', flexDirection: 'column', zIndex: 40 }}>
       <div style={{ padding: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-        <div style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 800, fontSize: '0.9rem', color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.2 }}>SS International Group</div>
+        <div className="brand-name" style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 800, fontSize: '0.9rem', color: '#ffffff', letterSpacing: '-0.02em', lineHeight: 1.2 }}>SS INTERNATIONAL GROUP</div>
         <div style={{ fontFamily: 'var(--font-inter)', fontSize: '0.7rem', color: 'rgba(255,255,255,0.4)', marginTop: '0.25rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>Admin Portal</div>
       </div>
 

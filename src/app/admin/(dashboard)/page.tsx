@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { generateMetadata as genMeta } from '@/lib/seo/metadata'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = genMeta({ title: 'Admin Dashboard', description: 'SS International Group admin dashboard', path: '/admin', noIndex: true })
+export const metadata: Metadata = genMeta({ title: 'Admin Dashboard', description: 'SS INTERNATIONAL GROUP admin dashboard', path: '/admin', noIndex: true })
 
 export default async function AdminDashboard() {
   const supabase = await createClient()

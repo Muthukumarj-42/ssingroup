@@ -8,7 +8,7 @@ import TalentNetworkCTA from '@/components/sections/careers/TalentNetworkCTA'
 
 export const metadata: Metadata = genMeta({
   title: 'Careers',
-  description: 'Join SS International Group. Open roles in finance, real estate, textiles, and operations across Mumbai, Dubai, and New York.',
+  description: 'Join SS INTERNATIONAL GROUP. Open roles in finance, real estate, textiles, and operations across Mumbai, Dubai, and New York.',
   path: '/careers',
 })
 

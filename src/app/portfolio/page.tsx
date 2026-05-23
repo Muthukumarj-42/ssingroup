@@ -7,7 +7,7 @@ import PartnershipCTA from '@/components/sections/portfolio/PartnershipCTA'
 
 export const metadata: Metadata = genMeta({
   title: 'Portfolio',
-  description: "Explore SS International Group's diverse global portfolio — real estate, finance, textiles, logistics, energy, and biotech across 3 continents.",
+  description: "Explore SS INTERNATIONAL GROUP's diverse global portfolio — real estate, finance, textiles, logistics, energy, and biotech across 3 continents.",
   path: '/portfolio',
 })
 

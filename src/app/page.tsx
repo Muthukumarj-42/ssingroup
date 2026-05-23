@@ -9,14 +9,14 @@ import Script from 'next/script'
 export const metadata = genMeta({
   title: 'Home',
   description:
-    'SS International Group — a global powerhouse managing 62+ businesses across India, UAE, and USA. Construction, real estate, jewellery, finance, and more.',
+    'SS INTERNATIONAL GROUP — a global powerhouse managing 62+ businesses across India, UAE, and USA. Construction, real estate, jewellery, finance, and more.',
   path: '/',
 })
 
 const homeJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'SS International Group',
+  name: 'SS INTERNATIONAL GROUP',
   url: 'https://www.ssingroup.com',
   potentialAction: {
     '@type': 'SearchAction',

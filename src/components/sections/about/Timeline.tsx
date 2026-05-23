@@ -10,40 +10,27 @@ const milestones = [
 export default function Timeline() {
   return (
     <section aria-labelledby="timeline-heading" style={{ backgroundColor: '#0A1628', padding: '120px 0', overflow: 'hidden' }}>
-      <div className="container-content">
+      <div className="container-content" style={{ maxWidth: '800px' }}>
         <FadeIn>
-          <h2 id="timeline-heading" style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 900, fontSize: 'clamp(2rem,4vw,3rem)', color: '#ffffff', textAlign: 'center', marginBottom: '4rem', letterSpacing: '-0.02em' }}>Journey to 62 Businesses</h2>
+          <h2 id="timeline-heading" style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 900, fontSize: 'clamp(2rem,4vw,3rem)', color: '#ffffff', textAlign: 'center', marginBottom: '5rem', letterSpacing: '-0.02em' }}>Journey to 62 Businesses</h2>
         </FadeIn>
 
-        {/* Desktop: horizontal timeline */}
-        <div className="hidden lg:block">
-          <div style={{ position: 'relative', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '0' }}>
-            {/* Connecting line */}
-            <div style={{ position: 'absolute', top: '28px', left: '12.5%', right: '12.5%', height: '2px', backgroundColor: '#C9922B', opacity: 0.4 }} />
-            
-            {milestones.map((m, i) => (
-              <FadeIn key={i} delay={i * 0.15}>
-                <div style={{ textAlign: 'center', padding: '0 1rem' }}>
-                  <div style={{ width: '56px', height: '56px', borderRadius: '50%', backgroundColor: '#C9922B', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.25rem', position: 'relative', zIndex: 1 }}>
-                    <span style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 900, fontSize: '0.75rem', color: '#0A1628' }}>{m.year}</span>
-                  </div>
-                  <div style={{ fontFamily: 'var(--font-inter)', fontWeight: 700, fontSize: '0.7rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.9)', marginBottom: '0.75rem' }}>{m.label}</div>
-                  <p style={{ fontFamily: 'var(--font-inter)', fontSize: '0.875rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{m.description}</p>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
+        {/* Unified Vertical Timeline */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', position: 'relative', paddingLeft: '3rem' }}>
+          {/* Timeline Center-left vertical line */}
+          <div style={{ position: 'absolute', left: '15px', top: '10px', bottom: '10px', width: '2px', backgroundColor: '#C9922B', opacity: 0.3 }} />
 
-        {/* Mobile: vertical timeline */}
-        <div className="lg:hidden" style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', position: 'relative', paddingLeft: '2.5rem', borderLeft: '2px solid rgba(201,146,43,0.3)' }}>
           {milestones.map((m, i) => (
-            <FadeIn key={i} delay={i * 0.1}>
+            <FadeIn key={i} delay={i * 0.15}>
               <div style={{ position: 'relative' }}>
-                <div style={{ position: 'absolute', left: '-3rem', top: '4px', width: '20px', height: '20px', borderRadius: '50%', backgroundColor: '#C9922B', border: '3px solid #0A1628' }} />
-                <div style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 900, fontSize: '1.5rem', color: '#C9922B', marginBottom: '0.25rem' }}>{m.year}</div>
-                <div style={{ fontFamily: 'var(--font-inter)', fontWeight: 700, fontSize: '0.7rem', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.8)', marginBottom: '0.5rem' }}>{m.label}</div>
-                <p style={{ fontFamily: 'var(--font-inter)', fontSize: '0.875rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.6 }}>{m.description}</p>
+                {/* Milestone dot */}
+                <div style={{ position: 'absolute', left: '-3rem', top: '6px', width: '32px', height: '32px', borderRadius: '50%', backgroundColor: '#0A1628', border: '3px solid #C9922B', display: 'flex', alignItems: 'center', justifyContent: 'center', transform: 'translateX(7px)', zIndex: 1 }} />
+                
+                <div style={{ display: 'flex', gap: '2rem', alignItems: 'baseline', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
+                  <div style={{ fontFamily: 'var(--font-montserrat)', fontWeight: 900, fontSize: '2rem', color: '#C9922B', lineHeight: 1 }}>{m.year}</div>
+                  <div style={{ fontFamily: 'var(--font-inter)', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: '#ffffff' }}>{m.label}</div>
+                </div>
+                <p style={{ fontFamily: 'var(--font-inter)', fontSize: '0.9375rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, margin: 0, maxWidth: '640px' }}>{m.description}</p>
               </div>
             </FadeIn>
           ))}
